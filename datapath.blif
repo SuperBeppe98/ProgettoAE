@@ -1,0 +1,315 @@
+.model DATAPATH
+.inputs VIN5 VIN4 VIN3 VIN2 VIN1 VIN0 SEL2 SEL1 SEL0
+.outputs ERR2 ERR1 ERR0 NA3 NA2 NA1 NA0 NB3 NB2 NB1 NB0 NC3 NC2 NC1 NC0 NE3 \
+NE2 NE1 NE0 NF3 NF2 NF1 NF0
+.latch    RES8 REGVOL8 re NIL 0
+.latch    RES7 REGVOL7 re NIL 0
+.latch    RES6 REGVOL6 re NIL 0
+.latch    RES5 REGVOL5 re NIL 0
+.latch    RES4 REGVOL4 re NIL 0
+.latch    RES3 REGVOL3 re NIL 0
+.latch    RES2 REGVOL2 re NIL 0
+.latch    RES1 REGVOL1 re NIL 0
+.latch    RES0 REGVOL0 re NIL 0
+.latch    VIN5 V5 re NIL 0
+.latch    VIN4 V4 re NIL 0
+.latch    VIN3 V3 re NIL 0
+.latch    VIN2 V2 re NIL 0
+.latch    VIN1 V1 re NIL 0
+.latch    VIN0 V0 re NIL 0
+.latch    OMUXA3 NA3 re NIL 0
+.latch    OMUXA2 NA2 re NIL 0
+.latch    OMUXA1 NA1 re NIL 0
+.latch    OMUXA0 NA0 re NIL 0
+.latch    OMUXB3 NB3 re NIL 0
+.latch    OMUXB2 NB2 re NIL 0
+.latch    OMUXB1 NB1 re NIL 0
+.latch    OMUXB0 NB0 re NIL 0
+.latch    OMUXC3 NC3 re NIL 0
+.latch    OMUXC2 NC2 re NIL 0
+.latch    OMUXC1 NC1 re NIL 0
+.latch    OMUXC0 NC0 re NIL 0
+.latch    OMUXE3 NE3 re NIL 0
+.latch    OMUXE2 NE2 re NIL 0
+.latch    OMUXE1 NE1 re NIL 0
+.latch    OMUXE0 NE0 re NIL 0
+.latch    OMUXF3 NF3 re NIL 0
+.latch    OMUXF2 NF2 re NIL 0
+.latch    OMUXF1 NF1 re NIL 0
+.latch    OMUXF0 NF0 re NIL 0
+.latch    SUMERR2 ERR2 re NIL 0
+.latch    [185] ERR1 re NIL 0
+.latch    OVERRNB ERR0 re NIL 0
+.names NA3 NB3 NC3 NE3 NF3 [445] [446] [447] [448] [449] OMUX3
+-1---1---- 1
+---1--1--- 1
+----1--1-- 1
+1-------1- 1
+--1------1 1
+.names NA2 NB2 NC2 NE2 NF2 [445] [446] [447] [448] [449] OMUX2
+-1---1---- 1
+---1--1--- 1
+----1--1-- 1
+1-------1- 1
+--1------1 1
+.names NA1 NB1 NC1 NE1 NF1 [445] [446] [447] [448] [449] OMUX1
+-1---1---- 1
+---1--1--- 1
+----1--1-- 1
+1-------1- 1
+--1------1 1
+.names NA0 NB0 NC0 NE0 NF0 [445] [446] [447] [448] [449] OMUX0
+-1---1---- 1
+---1--1--- 1
+----1--1-- 1
+1-------1- 1
+--1------1 1
+.names OMUX3 OMUX2 OINC2 [353] OINC3
+1--0 1
+-100 1
+.names OMUX2 [455] OINC2
+11 1
+00 1
+.names OMUX1 OMUX0 [455] OINC1
+1-1 1
+-11 1
+.names NA3 OINC3 [448] OMUXA3
+-11 1
+1-0 1
+.names NA2 OINC2 [448] OMUXA2
+-11 1
+1-0 1
+.names NA1 OINC1 [448] OMUXA1
+-11 1
+1-0 1
+.names NA0 OMUX0 [448] OMUXA0
+-01 1
+1-0 1
+.names NB3 OINC3 [445] OMUXB3
+-11 1
+1-0 1
+.names NB2 OINC2 [445] OMUXB2
+-11 1
+1-0 1
+.names NB1 OINC1 [445] OMUXB1
+-11 1
+1-0 1
+.names NB0 OMUX0 [445] OMUXB0
+-01 1
+1-0 1
+.names NC3 OINC3 [449] OMUXC3
+-11 1
+1-0 1
+.names NC2 OINC2 [449] OMUXC2
+-11 1
+1-0 1
+.names NC1 OINC1 [449] OMUXC1
+-11 1
+1-0 1
+.names NC0 OMUX0 [449] OMUXC0
+-01 1
+1-0 1
+.names NE3 OINC3 [446] OMUXE3
+-11 1
+1-0 1
+.names NE2 OINC2 [446] OMUXE2
+-11 1
+1-0 1
+.names NE1 OINC1 [446] OMUXE1
+-11 1
+1-0 1
+.names NE0 OMUX0 [446] OMUXE0
+-01 1
+1-0 1
+.names NF3 OINC3 [447] OMUXF3
+-11 1
+1-0 1
+.names NF2 OINC2 [447] OMUXF2
+-11 1
+1-0 1
+.names NF1 OINC1 [447] OMUXF1
+-11 1
+1-0 1
+.names NF0 OMUX0 [447] OMUXF0
+-01 1
+1-0 1
+.names [439] [446] OVERRNE
+01 1
+.names [439] [445] OVERRNB
+01 1
+.names [201] [436] [450] VOL5
+001 1
+100 1
+.names [199] [436] [441] VOL3
+001 1
+100 1
+.names [197] [436] [453] VOL1
+101 1
+000 1
+.names VIN0 V0 [436] [453] VOL0
+1-01 1
+-101 1
+.names REGVOL7 REGVOL6 REGVOL8 K5 RES8
+1101 1
+.names REGVOL7 RES8 RES6 REGVOL8 K5 RES7
+10-0- 1
+-0001 1
+.names REGVOL6 REGVOL8 K5 RES6
+001 1
+100 1
+.names REGVOL8 [192] [442] RES5
+011 1
+000 1
+.names REGVOL8 [191] K3 RES4
+001 1
+010 1
+.names REGVOL8 [190] [443] RES3
+011 1
+000 1
+.names REGVOL8 [189] K1 RES2
+001 1
+010 1
+.names REGVOL8 [188] [454] RES1
+011 1
+000 1
+.names VOL0 REGVOL0 REGVOL8 [454] RES0
+1-01 1
+-101 1
+.names OVERRNB [456] SUMERR2
+1- 1
+-0 1
+.names REGVOL5 [192] [442] K5
+10- 1
+-10 1
+.names VOL5 REGVOL5 [192]
+01 1
+10 1
+.names REGVOL4 [467] [191]
+11 1
+00 1
+.names REGVOL3 [190] [443] K3
+10- 1
+-10 1
+.names VOL3 REGVOL3 [190]
+01 1
+10 1
+.names REGVOL2 [468] [189]
+11 1
+00 1
+.names REGVOL1 [188] [454] K1
+10- 1
+-10 1
+.names VOL1 REGVOL1 [188]
+01 1
+10 1
+.names OVERRNE REGVOL8 [456] [185]
+--0 1
+01- 1
+.names OMUX3 OMUX2 [455] [353]
+110 1
+.names V5 C5 [201]
+01 1
+10 1
+.names V4 C4 [200]
+01 1
+10 1
+.names [199] C3 [441] [373]
+01- 1
+1-1 1
+.names V3 C3 [199]
+01 1
+10 1
+.names V2 C2 [198]
+01 1
+10 1
+.names [197] [444] [453] [377]
+01- 1
+1-0 1
+.names V1 [444] [197]
+01 1
+10 1
+.names VIN5 [463] C5
+01 1
+10 1
+.names VIN4 [464] C4
+01 1
+10 1
+.names VIN3 [465] C3
+01 1
+10 1
+.names VIN2 [466] C2
+01 1
+10 1
+.names SEL1 SEL0 [433]
+1- 1
+-0 1
+.names SEL2 SEL1 [434]
+01 1
+.names SEL1 SEL0 [435]
+00 1
+.names SEL2 [433] [436]
+0- 1
+-1 1
+.names OMUX0 OINC3 OINC2 OINC1 [439]
+0--- 1
+-1-- 1
+--1- 1
+---1 1
+.names [198] [377] C2 [441]
+11- 1
+0-1 1
+.names REGVOL4 [191] K3 [442]
+00- 1
+-10 1
+.names REGVOL2 [189] K1 [443]
+00- 1
+-10 1
+.names VIN1 VIN0 [466] [444]
+0-1 1
+-01 1
+.names SEL2 [433] [445]
+00 1
+.names SEL0 [434] [446]
+11 1
+.names SEL2 [435] [447]
+11 1
+.names SEL2 [435] [448]
+01 1
+.names SEL0 [434] [449]
+01 1
+.names [200] [373] C4 [450]
+11- 1
+0-1 1
+.names VIN0 V0 [453]
+0- 1
+-0 1
+.names VOL0 REGVOL0 [454]
+0- 1
+-0 1
+.names OMUX1 OMUX0 [455]
+0- 1
+-0 1
+.names OVERRNE REGVOL8 [456]
+0- 1
+-1 1
+.names VIN4 C4 [463]
+1- 1
+-1 1
+.names VIN3 C3 [464]
+1- 1
+-1 1
+.names VIN2 C2 [465]
+1- 1
+-1 1
+.names VIN1 VIN0 [466]
+1- 1
+-1 1
+.names [200] [373] [436] [467]
+--1 1
+11- 1
+00- 1
+.names [198] [377] [436] [468]
+--1 1
+11- 1
+00- 1
+.end

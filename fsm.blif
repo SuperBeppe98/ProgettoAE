@@ -1,0 +1,123 @@
+.model FSM
+.inputs I6 I5 I4 I3 I2 I1 I0
+.outputs OI ERR2 ERR1 ERR0 GA GB GC GD GE GF SEL2 SEL1 SEL0
+.latch    [502] LatchOut_v7   0
+.latch    [503] LatchOut_v8   0
+.latch    [504] LatchOut_v9   1
+.start_kiss
+.i 7
+.o 13
+.p 16
+.s 7
+.r SPENTO
+0------ SPENTO SPENTO 0---000000111
+10----- SPENTO SPENTO 0---000000111
+110---- SPENTO SPENTO 0---000000111
+111---- SPENTO ISPEZIONE 1000100000000
+0------ ISPEZIONE SCARTO 1000010000001
+1------ ISPEZIONE FRESA 1000001000010
+0------ SCARTO SPENTO 0101000000111
+1------ SCARTO ISPEZIONE 1000100000000
+1------ FRESA QUALITA 1000000100101
+0------ FRESA SPENTO 0001000000111
+0------ QUALITA SPENTO 0010000000111
+1------ QUALITA CONT 1000000000111
+1------ CONT FINE 1000000001100
+0------ CONT FINE 1000000010011
+1------ FINE ISPEZIONE 1000100000000
+0------ FINE SPENTO 0110000000111
+.end_kiss
+.latch_order LatchOut_v7 LatchOut_v8 LatchOut_v9
+.code SPENTO 001
+.code ISPEZIONE 011
+.code SCARTO 010
+.code FRESA 110
+.code QUALITA 111
+.code CONT 101
+.code FINE 000
+.names I6 GD [535] [502]
+-1- 1
+1-1 1
+.names LatchOut_v7 GA GD [535] [503]
+-1-- 1
+--1- 1
+0--1 1
+.names GC GF [536] [504]
+001 1
+.names LatchOut_v7 ERR1 ERR0 SEL2 OI
+---0 1
+100- 1
+.names I6 LatchOut_v7 LatchOut_v9 ERR2
+000 1
+.names I6 ERR0 [536] ERR1
+001 1
+.names I6 LatchOut_v8 LatchOut_v9 ERR0
+010 1
+.names I6 I5 I4 LatchOut_v7 LatchOut_v8 LatchOut_v9 GA
+1--0-0 1
+11100- 1
+.names I6 LatchOut_v7 [535] GB
+001 1
+.names I6 LatchOut_v7 [535] GC
+101 1
+.names I6 LatchOut_v7 LatchOut_v9 GD
+110 1
+.names I6 LatchOut_v7 LatchOut_v8 GE
+010 1
+.names I6 LatchOut_v7 LatchOut_v8 GF
+110 1
+.names GA GC [536] SEL2
+001 1
+.names GA GB GD GF SEL1
+0000 1
+.names GA GC GF SEL0
+000 1
+.names LatchOut_v8 LatchOut_v9 [535]
+11 1
+.names GB GE [536]
+00 1
+.exdc 
+.inputs I6 I5 I4 I3 I2 I1 I0 LatchOut_v7 LatchOut_v8 LatchOut_v9
+.outputs [502] [503] [504] OI ERR2 ERR1 ERR0 GA GB GC GD GE GF SEL2 SEL1 SEL0
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 [502]
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 [503]
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 [504]
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 OI
+100 1
+.names I6 I5 I4 LatchOut_v7 LatchOut_v8 LatchOut_v9 ERR2
+---100 1
+0--001 1
+-0-001 1
+--0001 1
+.names I6 I5 I4 LatchOut_v7 LatchOut_v8 LatchOut_v9 ERR1
+---100 1
+0--001 1
+-0-001 1
+--0001 1
+.names I6 I5 I4 LatchOut_v7 LatchOut_v8 LatchOut_v9 ERR0
+---100 1
+0--001 1
+-0-001 1
+--0001 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 GA
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 GB
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 GC
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 GD
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 GE
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 GF
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 SEL2
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 SEL1
+100 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 SEL0
+100 1
+.end

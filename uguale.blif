@@ -1,0 +1,21 @@
+#Uguale 5 per Overflow
+.model UGUALE5
+.inputs A4 A3 A2 A1 A0
+.outputs O
+
+.names A4 A3 A2 A1 A0 O
+10000 1
+
+.end
+
+
+
+#Uguale 9 per overflow sommatore
+.model UGUALE9
+.inputs A8 A7 A6 A5 A4 A3 A2 A1 A0
+.outputs O
+
+.names A8 A7 A6 A5 A4 A3 A2 A1 A0 O
+1-------- 1
+
+.end

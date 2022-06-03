@@ -1,0 +1,12 @@
+.model COSTANTE1
+.outputs O0
+.names O0
+1
+.end
+
+
+
+.model COSTANTE0
+.outputs O0
+.names O0
+.end

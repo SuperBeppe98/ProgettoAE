@@ -1,0 +1,23 @@
+.model OR
+.inputs A B
+.outputs O
+
+.names A B O
+10 1
+01 1
+11 1
+
+.end
+
+
+
+.model OR5
+.inputs A4 A3 A2 A1 A0
+.outputs O
+
+.subckt OR A=A4 B=A3 O=K0
+.subckt OR A=A2 B=K0 O=K1
+.subckt OR A=A1 B=K1 O=K2
+.subckt OR A=A0 B=K2 O=O
+
+.end
