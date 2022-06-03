@@ -1,2 +1,4 @@
 # ProgettoAE
-Progetto architettura degli elaboratori Brusco Zeni UniVR
+Progetto architettura degli elaboratori 2018-2019
+Brusco Zeni 
+UniVR
